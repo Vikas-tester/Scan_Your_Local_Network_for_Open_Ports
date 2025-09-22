@@ -3,7 +3,6 @@ Run this command in your terminal:
 
 nmap -sS 192.168.1.0/24
 
-
 -sS means TCP SYN scan, also called a "stealth scan".
 
 It sends SYN packets (like the first step in a TCP handshake) to each target port.
