@@ -78,6 +78,12 @@ Run the scan:
 nmap -sS <your_subnet> -oN scan_results.txt
 <img width="1920" height="1080" alt="Screenshot From 2025-09-22 14-24-52" src="https://github.com/user-attachments/assets/4ff15230-f597-4583-8a1c-9af68d4e812b" />
 
+This command for  altervative target for nmap, you can use any target in nmap by giving ip address of target.
+<img width="638" height="218" alt="Screenshot From 2025-09-22 15-13-52" src="https://github.com/user-attachments/assets/b6ad4d9f-7b1b-40ee-91cd-2f11ae617f00" />
+
+As you can see this target is not wokring when i'm using it on nmap.
+<img width="764" height="94" alt="Screenshot From 2025-09-22 15-16-38" src="https://github.com/user-attachments/assets/b8d5f0b5-3350-4758-b504-947915313a05" />
+
 
 Prepared by Vikas
 
