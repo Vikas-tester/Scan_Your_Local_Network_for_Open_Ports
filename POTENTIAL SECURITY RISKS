@@ -1,0 +1,38 @@
+Potential Security Risks from Open Ports
+
+
+Port	      Service	     Risks
+22          SSH          Brute-force attacks to guess passwords.
+
+Exploitation of weak or outdated SSH versions.
+
+
+If misconfigured, could allow unauthorized remote access. |
+| 80 | HTTP | - Vulnerable to unsecured data transmission (no encryption).
+
+Susceptible to man-in-the-middle (MITM) attacks.
+
+Possible web application vulnerabilities (e.g., XSS, SQL injection). |
+| 443 | HTTPS | - If SSL/TLS is outdated or misconfigured, susceptible to SSL attacks.
+
+Misissued or expired certificates can cause trust issues. |
+| 53 | DNS | - DNS amplification attacks if the server allows recursive queries from outside.
+
+Can be used for DNS cache poisoning or spoofing. |
+| 139 | NetBIOS/SMB | - Exploitation of SMB vulnerabilities (e.g., EternalBlue).
+
+May allow unauthorized file sharing or data access.
+
+Often targeted by malware and ransomware attacks. |
+
+
+
+General Risks of Open Ports
+
+Increased attack surface: Each open port is a potential entry point.
+
+Exploitation of unpatched services: Vulnerabilities in services listening on these ports.
+
+Unauthorized access if services aren’t properly secured.
+
+Data leakage or interception especially on unencrypted protocols.
