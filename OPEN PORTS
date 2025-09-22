@@ -1,0 +1,16 @@
+Common Services on Open Ports
+
+Port Number	       Service Name     	       Description	                                  Security Notes
+22                 SSH                       Secure remote login and command execution.     Should be secured with strong auth; common target for brute-force attacks.
+80                 HTTP                      Standard web traffic (unencrypted).            Vulnerable to MITM attacks if not using HTTPS.
+443                HTTPS                     Encrypted web traffic using SSL/TLS.           More secure than HTTP; ensure valid certificates.
+53                 DNS                       Resolves domain names to IP addresses.         Open DNS servers can be abused for DNS amplification attacks.
+139                NetBIOS Session Service.  File and printer sharing on Windows networks.  Often targeted for SMB exploits; best to restrict or disable if unused.
+
+Summary:
+
+Ports like 22, 80, and 443 are common on servers providing web or remote access services.
+
+Port 53 is critical for DNS but can be abused if open to the internet.
+
+Port 139 relates to Windows file sharing and can be risky if exposed externally.
