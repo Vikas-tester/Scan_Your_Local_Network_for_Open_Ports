@@ -1,0 +1,48 @@
+Analyze Packet Capture with Wireshark
+1. Start Wireshark and Select Your Network Interface
+
+Open Wireshark.
+
+Choose the network interface connected to your local network (e.g., eth0 or wlan0).
+
+Click Start to begin capturing packets.
+
+2. Run Your Nmap Scan
+
+While Wireshark is capturing, run your Nmap TCP SYN scan:
+
+nmap -sS 192.168.1.0/24
+
+
+This will generate network packets Wireshark can capture.
+
+3. Stop Wireshark Capture
+
+After the scan completes, click the Stop button in Wireshark.
+
+4. Apply Display Filters
+
+To focus on the scan-related traffic, use filters like:
+
+tcp.flags.syn == 1
+(shows SYN packets sent by Nmap)
+
+ip.addr == <target_IP>
+(to see packets to/from a specific IP)
+
+5. Analyze Packets
+
+Look for SYN packets sent to target ports.
+
+Check responses:
+
+SYN-ACK = open port
+
+RST = closed port
+
+See how Nmap performs the scan stealthily (only sending SYN without completing handshake).
+
+6. Save the Capture (Optional)
+
+Save the capture file for future review:
+File → Save As → your_capture.pcap
