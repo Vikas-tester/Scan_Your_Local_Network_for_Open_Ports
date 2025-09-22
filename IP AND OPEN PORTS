@@ -1,0 +1,31 @@
+IP addresses and open ports found.
+
+Run the scan command:
+
+nmap -sS 192.168.1.0/24
+
+Look at the output, which will be something like:
+
+Nmap scan report for 192.168.1.10
+Host is up (0.0012s latency).
+Not shown: 996 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 192.168.1.15
+Host is up (0.0021s latency).
+Not shown: 998 closed ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+
+Write down:
+
+IP Address	   Open Ports	   Services
+192.168.1.10	 22, 80, 443	 SSH, HTTP, HTTPS
+192.168.1.15	 53	           DNS
+
+If the list is long, save the scan output to a file for reference:
+
+nmap -sS 192.168.1.0/24 -oN scan_results.txt
