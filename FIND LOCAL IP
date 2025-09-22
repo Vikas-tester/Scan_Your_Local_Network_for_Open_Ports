@@ -1,0 +1,56 @@
+How to Use Nmap for Basic Network Scanning
+1. Run a Simple Scan on One IP
+nmap 192.168.1.15
+
+
+Scans the device with IP 192.168.1.15 and shows open ports.
+
+2. Scan Your Entire Local Network
+
+If your IP range is 192.168.1.0/24, scan all devices in that subnet:
+
+nmap -sS 192.168.1.0/24
+
+
+-sS = TCP SYN scan (stealth scan, faster and less likely to be logged).
+
+3. Save Scan Results to a File
+
+To save the output in a text file:
+
+nmap -sS 192.168.1.0/24 -oN scan_results.txt
+
+
+Or save as an HTML file:
+
+nmap -sS 192.168.1.0/24 -oX scan_results.xml
+
+
+You can convert XML to HTML later if needed.
+
+4. Scan Specific Ports
+
+Scan only common ports (like 22, 80, 443):
+
+nmap -p 22,80,443 192.168.1.0/24
+
+5. Get More Details About the Service
+
+Add service/version detection:
+
+nmap -sS -sV 192.168.1.0/24
+
+
+-sV probes open ports to detect service/version info.
+
+6. Run a Ping Scan (Find Live Hosts Only)
+
+To find which devices are online without port scanning:
+
+nmap -sn 192.168.1.0/24
+
+Tips
+
+Run man nmap to see the full list of options.
+
+Use sudo if you get permission errors (especially on Linux).
