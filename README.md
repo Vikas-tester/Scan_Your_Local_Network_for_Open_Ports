@@ -76,6 +76,8 @@ ip a
 
 Run the scan:
 nmap -sS <your_subnet> -oN scan_results.txt
+<img width="1920" height="1080" alt="Screenshot From 2025-09-22 14-24-52" src="https://github.com/user-attachments/assets/4ff15230-f597-4583-8a1c-9af68d4e812b" />
+
 
 Prepared by Vikas
 
