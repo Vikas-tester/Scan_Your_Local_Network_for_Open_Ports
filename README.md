@@ -87,6 +87,3 @@ As you can see this target is not wokring when i'm using it on nmap.
 
 Prepared by Vikas
 
----
-
-If you want, I can now guide you step-by-step on pushing this to GitHub with commands!
