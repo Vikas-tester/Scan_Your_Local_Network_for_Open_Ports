@@ -1,0 +1,52 @@
+Starting Nmap 7.93 ( https://nmap.org ) at 2025-09-22 15:00 IST
+Nmap scan report for 192.168.1.1
+Host is up (0.0010s latency).
+Not shown: 997 closed ports
+PORT    STATE SERVICE
+22/tcp  open  ssh
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for 192.168.1.15
+Host is up (0.0021s latency).
+Not shown: 998 closed ports
+PORT    STATE SERVICE
+53/tcp  open  domain
+
+Nmap scan report for 192.168.1.20
+Host is up (0.0032s latency).
+Not shown: 999 closed ports
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 12.56 seconds
+
+---
+
+Common Services Running on Open Ports:
+- Port 22: SSH (Secure Shell) – Secure remote access.
+- Port 80: HTTP – Web traffic (unencrypted).
+- Port 443: HTTPS – Secure web traffic.
+- Port 53: DNS – Domain name resolution.
+- Port 139: NetBIOS Session Service – Windows file sharing.
+
+---
+
+Potential Security Risks from Open Ports:
+- Port 22 (SSH): Vulnerable to brute-force attacks if weak passwords are used.
+- Port 80 (HTTP): Unencrypted traffic vulnerable to interception and web attacks.
+- Port 443 (HTTPS): Risk if SSL/TLS is outdated or misconfigured.
+- Port 53 (DNS): Can be exploited for DNS amplification attacks.
+- Port 139 (NetBIOS): Often targeted for SMB exploits and unauthorized access.
+
+---
+
+Saved scan results as text file: scan_results.txt
+
+Command used:
+nmap -sS 192.168.1.0/24 -oN scan_results.txt
+
+---
+
+Optional packet analysis was performed using Wireshark to observe TCP SYN packets during scanning.
+
