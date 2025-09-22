@@ -1,0 +1,17 @@
+TCP SYN Scan with Nmap
+Run this command in your terminal:
+
+nmap -sS 192.168.1.0/24
+
+
+-sS means TCP SYN scan, also called a "stealth scan".
+
+It sends SYN packets (like the first step in a TCP handshake) to each target port.
+
+If a port replies with SYN-ACK, it's open.
+
+If it replies with RST, it's closed.
+
+This scan is faster and less likely to be detected by some firewalls because it doesn’t complete the full TCP handshake.
+
+The target 192.168.1.0/24 tells Nmap to scan all IP addresses in the subnet from 192.168.1.1 to 192.168.1.254.
