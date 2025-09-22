@@ -1,0 +1,35 @@
+How to Install Nmap on Manjaro
+Step 1: Update Package Database
+
+Open your terminal and run:
+
+sudo pacman -Syu
+
+
+This updates your package list and upgrades existing packages.
+
+Step 2: Install Nmap
+
+Run the following command to install Nmap:
+
+sudo pacman -S nmap
+
+Step 3: Verify Installation
+
+Check if Nmap is installed correctly by typing:
+
+nmap --version
+
+
+You should see the version info of Nmap printed.
+
+Step 4: Run a Simple Scan (Optional)
+
+Try scanning your localhost:
+
+nmap 127.0.0.1
+
+
+This will scan ports on your local machine.
+
+Done! You now have Nmap installed and ready to use on Manjaro.
